@@ -1,0 +1,35 @@
+<div class="container my-5">
+    <div class="card-container mx-auto my-2">
+        <div class="row-container row shadow text-secondary">
+            <div class="col form-container ">
+                <form class="custom-form" [formGroup]="loginForm" #myLogForm="ngForm">
+                    <div class="mb-3 form-floating">
+                        <div class="mb-3 form-floating">
+                            <input type="email" class="form-control" id="email" placeholder="" ="email"
+                                required formControlName="email">
+                            <label for="email" class="form-label">Email</label>
+                            <span>Email should not be empty..!</span>
+                        </div>
+                        <div class="mb-3 form-floating">
+                            <input type="password" class="form-control" id="pwd" placeholder="" formControlName="pwd"
+                                required>
+                            <label for="pwd" class="form-label">Password</label>
+                            <span>Password should not be empty..!</span>
+                        </div>
+                        <div class="my-4 text-center">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                        <div class="text-center">
+                            Dont you have an account? <a href="/reg" class="btn btn-outline-danger">Register here</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div
+                class="col text-container text-center d-flex flex-column justify-content-center align-items-center text-light">
+                <h2>Login form</h2><br>
+                <p> Login with valid credentials </p>
+            </div>
+        </div>
+    </div>
+</div>
