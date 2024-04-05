@@ -1,0 +1,39 @@
+body {
+    background-color: #f0f0f0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.card-container {
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.row-container {
+    background: linear-gradient(to right, rgb(58, 79, 69), rgb(34, 61, 48), rgb(29, 57, 36));
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 5px;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.text-container h2,
+.text-container h5 {
+    color: rgb(225, 18, 18);
+    font-style: bold;
+    margin: 0;
+}
+
+.custom-card-style {
+    background-color: #f0f0f0;
+    border: 2px solid #28a745;
+    border-radius: 10px;
+}

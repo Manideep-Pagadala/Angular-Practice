@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_ID, NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +10,8 @@ import { HeaderComponent } from './group/header/header.component';
 import { FooterComponent } from './group/footer/footer.component';
 import { HomeComponent } from './group/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { TwowaybindingComponent } from './group/twowaybinding/twowaybinding.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    TwowaybindingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+
   ],
   providers: [
     provideClientHydration()

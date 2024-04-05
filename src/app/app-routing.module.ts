@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './group/login/login.component';
 import { HomeComponent } from './group/home/home.component';
 import { RegComponent } from './group/reg/reg.component';
+import { TwowaybindingComponent } from './group/twowaybinding/twowaybinding.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path:"reg",
     component:RegComponent
+  },
+  {
+    path:"twoway",
+    component:TwowaybindingComponent
   },
   {
     path:"**",

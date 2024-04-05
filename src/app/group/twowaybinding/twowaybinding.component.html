@@ -1,0 +1,40 @@
+<div class="container my-5">
+    <div class="card-container mx-auto my-2">
+        <div class="row-container row shadow text-secondary">
+            <div class="col form-container ">
+                <form class="custom-form text-center">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="name" [(ngModel)]="user.name">
+                        <label for="name" class="form-label">Name</label>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="email" class="form-control" name="email" [(ngModel)]="user.email">
+                        <label for="name" class="form-label">Email</label>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="number" class="form-control" name="phno" [(ngModel)]="user.phno">
+                        <label for="phno" class="form-label">Phone</label>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="password" class="form-control" name="pwd" [(ngModel)]="user.pwd">
+                        <label for="pwd" class="form-label">Password</label>
+                    </div>
+                    <button type="submit" (click)=" reg()" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div
+                class="col text-container text-center d-flex flex-column justify-content-center align-items-center text-light">
+                <div class="card custom-card-style" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title bg-success text-white fw-bold">User Data</h5>
+                        <h5><span class="text-success">Name:</span> {{user.name}}</h5>
+                        <h5><span class="text-success">Email: </span>{{user.email}}</h5>
+                        <h5><span class="text-success">Phone:</span> {{user.phno}}</h5>
+                        <h5><span class="text-success">Password:</span> {{user.pwd}}</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
