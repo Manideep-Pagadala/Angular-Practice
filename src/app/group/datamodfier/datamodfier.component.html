@@ -1,0 +1,40 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<div class="container my-5 ">
+    <div class="card shadow">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Emp Id</th>
+                        <th scope="col">Emp Name</th>
+                        <th scope="col">Emp salary</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of employees;let i = index;">
+                        <td>{{emp.eid}}</td>
+                        <td>{{emp.name}}</td>
+                        <td>{{emp.salary}}</td>
+                        <td><button class="btn btn-danger btn-sm" (click)="onClickDelete(i)"><span
+                                    class="material-symbols-outlined">
+                                    delete
+                                </span></button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" [(ngModel)]="newEmp.eid" placeholder="Enter Id" class="field-style">
+                        </td>
+                        <td><input type="text" [(ngModel)]="newEmp.name" placeholder="Enter Name" class="field-style">
+                        </td>
+                        <td><input type="number" [(ngModel)]="newEmp.salary" placeholder="Enter Sal"
+                                class="field-style"></td>
+                        <td><button class="btn btn-info btn-sm" (click)="onClickInsert()"><span
+                                    class="material-symbols-outlined">
+                                    person_add
+                                </span></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

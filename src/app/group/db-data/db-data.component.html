@@ -1,0 +1,17 @@
+
+<div class="container mx-auto my-5">
+    <div class="row">
+        <ng-container *ngFor="let user of users ; let i =index">
+            <div class="col-md-4 col-12 col-sm-6 mb-3">
+                <div class="card shadow fw-bold bg-secondary ">
+                    <div class="card-body text-white">
+                        <h6 class="card-title bg-secondary  text-warning">{{i+1}}. {{ user.uname }}</h6>
+
+                        <p class="card-text">Email: {{ user.email }}</p>
+                        <p class="card-text">Phone Number: {{ user.phno }}</p>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

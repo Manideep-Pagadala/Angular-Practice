@@ -12,6 +12,8 @@ import { HomeComponent } from './group/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { TwowaybindingComponent } from './group/twowaybinding/twowaybinding.component';
+import { DatamodfierComponent } from './group/datamodfier/datamodfier.component';
+import { DbDataComponent } from './group/db-data/db-data.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TwowaybindingComponent } from './group/twowaybinding/twowaybinding.comp
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    TwowaybindingComponent
+    TwowaybindingComponent,
+    DatamodfierComponent,
+    DbDataComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 interface userbinding {
   uname: string,
@@ -11,17 +12,26 @@ interface userbinding {
   templateUrl: './reg.component.html',
   styleUrl: './reg.component.css'
 })
-export class RegComponent {
-
+export class RegComponent implements OnInit {
+  public response: string = "";
   public user: userbinding = {
     uname: "",
     email: "",
     pwd: "",
     phno: null
   }
+  constructor(@Inject(HttpClient) private client: HttpClient) {
+  } ngOnInit(): void {
+  }
 
   reg() {
     console.log(this.user);
+    this.client.post("http://localhost:8080/reg", this.user, { responseType: "text" }).subscribe(res => {
+      this.response = res;
+      alert(this.response);
+      console.log(res);
+    }
+    )
   }
 
 }
